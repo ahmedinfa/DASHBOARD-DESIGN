@@ -7,11 +7,322 @@
     <!-- tailwind css cdn -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
+
   <body>
     <!-- main -->
-    <main>
-      <!-- section -->
-      <section></section>
+    <main class="min-h-screen bg-yellow-200">
+      <header class="container mx-auto p-3">
+        <nav
+          class="h-20 px-3 bg-white rounded-md flex justify-between items-center"
+        >
+          <!-- left -->
+          <div class="flex justify-between items-center w-fit h-full gap-2">
+            <img src="./assets/logo.png" alt="nav logo" />
+            <h3 class="text-3xl">
+              Dev<span class="font-semibold">Board</span>
+            </h3>
+          </div>
+          <!-- right -->
+          <div class="flex justify-between items-center w-fit h-full gap-5">
+            <!-- complete task box -->
+            <div
+              class="py-2 px-3 bg-slate-200 rounded-lg flex justify-between items-center gap-3"
+            >
+              <img src="./assets/checkbox.png" alt="checkbox" />
+              <h3 class="text-3xl font-semibold" id="completeTask">0</h3>
+            </div>
+            <!-- color changing button -->
+            <div class="p-2 rounded-full bg-slate-200">
+              <img src="./assets/theme-btn.png" alt="" />
+            </div>
+          </div>
+        </nav>
+        <section class="w-full mt-3 grid grid-cols-12 gap-3">
+          <!-- left -->
+          <div class="col-span-9 bg-white rounded-md">
+            <!-- top cards -->
+            <div
+              class="grid grid-cols-12 gap-3 border-b-2 border-dashed border-blue-100 p-4"
+            >
+              <!-- card 1 -->
+              <div
+                class="col-span-3 py-2 bg-slate-200 rounded-md flex justify-center items-center"
+              >
+                <div class="flex justify-center items-center gap-5">
+                  <img src="./assets/checkbox.png" alt="checkbox logo" />
+                  <div>
+                    <p class="text-xl capitalize font-semibold text-slate-600">
+                      task assigned
+                    </p>
+                    <h3 id="assignedTask" class="text-3xl font-semibold">6</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div
+                class="col-span-6 py-2 bg-gradient-to-r from-blue-500 to-blue-400 rounded-md flex justify-center items-center"
+                id="board"
+              >
+                <div class="flex justify-center items-center gap-5">
+                  <img src="./assets/board.png" alt="board logo" />
+                  <div class="text-lg font-semibold text-white">
+                    Discover Something <br />
+                    New Today!
+                  </div>
+                </div>
+              </div>
+              <!-- card 3 -->
+              <div
+                class="col-span-3 py-2 bg-slate-200 rounded-md flex justify-center items-center"
+              >
+                <div class="flex justify-center items-center gap-5">
+                  <img src="./assets/calender.png" alt="calender logo" />
+                  <div>
+                    <p class="capitalize text-xl">sun,</p>
+                    <p class="capitalize text-xl font-medium">mar 28 2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- task cards -->
+            <div class="grid grid-cols-3 p-4 gap-3">
+              <!-- task card 1 -->
+              <div class="p-3 bg-slate-200 rounded-md">
+                <!-- card top -->
+                <div class="space-y-2">
+                  <h3 class="px-3 py-1 bg-slate-100 w-fit rounded-md text-base">
+                    ShopEase
+                  </h3>
+                  <h1 class="text-xl font-semibold" id="cardOneTitle">
+                    Fix Mobile Button Issue
+                  </h1>
+                  <p
+                    class="text-base leading-normal p-2 bg-slate-100 rounded-md"
+                  >
+                    Debug using Chrome DevTools, check for overlapping
+                  </p>
+                </div>
+                <!-- bottom -->
+                <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
+                  <div class="flex justify-between items-center">
+                    <!-- left -->
+                    <div>
+                      <p class="text-base text-gray-600">Deadline</p>
+                      <p class="text-base font-semibold">21 March 2025</p>
+                    </div>
+                    <!-- right -->
+                    <button
+                      class="py-2 px-4 bg-blue-600 text-base font-semibold text-white rounded-lg"
+                      id="cardOneBtn"
+                    >
+                      Completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- task card 2 -->
+              <div class="p-3 bg-slate-200 rounded-md">
+                <!-- card top -->
+                <div class="space-y-2">
+                  <h3 class="px-3 py-1 bg-slate-100 w-fit rounded-md text-base">
+                    CloudSync
+                  </h3>
+                  <h1 class="text-xl font-semibold" id="cardTwoTitle">
+                    Add Dark Mode
+                  </h1>
+                  <p
+                    class="text-base leading-normal p-2 bg-slate-100 rounded-md"
+                  >
+                    Store the user's preference in localStorage, update CSS
+                    varia
+                  </p>
+                </div>
+                <!-- bottom -->
+                <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
+                  <div class="flex justify-between items-center">
+                    <!-- left -->
+                    <div>
+                      <p class="text-base text-gray-600">Deadline</p>
+                      <p class="text-base font-semibold">21 March 2025</p>
+                    </div>
+                    <!-- right -->
+                    <button
+                      class="py-2 px-4 bg-blue-600 text-base font-semibold text-white rounded-lg"
+                      id="cardTwoBtn"
+                    >
+                      Completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- task card 3 -->
+              <div class="p-3 bg-slate-200 rounded-md">
+                <!-- card top -->
+                <div class="space-y-2">
+                  <h3 class="px-3 py-1 bg-slate-100 w-fit rounded-md text-base">
+                    SwiftPay
+                  </h3>
+                  <h1 class="text-xl font-semibold" id="cardThreeTitle">
+                    Optimize Home page 
+                  </h1>
+                  <p
+                    class="text-base leading-normal p-2 bg-slate-100 rounded-md"
+                  >
+                    A slow-loading homepage can increase bounce rates
+                  </p>
+                </div>
+                <!-- bottom -->
+                <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
+                  <div class="flex justify-between items-center">
+                    <!-- left -->
+                    <div>
+                      <p class="text-base text-gray-600">Deadline</p>
+                      <p class="text-base font-semibold">21 March 2025</p>
+                    </div>
+                    <!-- right -->
+                    <button
+                      class="py-2 px-4 bg-blue-600 text-base font-semibold text-white rounded-lg"
+                      id="cardThreeBtn"
+                    >
+                      Completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- task card 4 -->
+              <div class="p-3 bg-slate-200 rounded-md">
+                <!-- card top -->
+                <div class="space-y-2">
+                  <h3 class="px-3 py-1 bg-slate-100 w-fit rounded-md text-base">
+                    Meta
+                  </h3>
+                  <h1 class="text-xl font-semibold" id="cardFourTitle">
+                    Add new emoji 🤲
+                  </h1>
+                  <p
+                    class="text-base leading-normal p-2 bg-slate-100 rounded-md"
+                  >
+                    Emojis have become an essential part of digital
+                    communication
+                  </p>
+                </div>
+                <!-- bottom -->
+                <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
+                  <div class="flex justify-between items-center">
+                    <!-- left -->
+                    <div>
+                      <p class="text-base text-gray-600">Deadline</p>
+                      <p class="text-base font-semibold">21 March 2025</p>
+                    </div>
+                    <!-- right -->
+                    <button
+                      class="py-2 px-4 bg-blue-600 text-base font-semibold text-white rounded-lg"
+                      id="cardFourBtn"
+                    >
+                      Completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- task card 5 -->
+              <div class="p-3 bg-slate-200 rounded-md">
+                <!-- card top -->
+                <div class="space-y-2">
+                  <h3 class="px-3 py-1 bg-slate-100 w-fit rounded-md text-base">
+                    Google LLC
+                  </h3>
+                  <h1 class="text-xl font-semibold" id="cardFiveTitle">
+                    Integrate OpenAI API
+                  </h1>
+                  <p
+                    class="text-base leading-normal p-2 bg-slate-100 rounded-md"
+                  >
+                    Integrating the OpenAI API into your applications unlocks AI
+                    capabilities
+                  </p>
+                </div>
+                <!-- bottom -->
+                <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
+                  <div class="flex justify-between items-center">
+                    <!-- left -->
+                    <div>
+                      <p class="text-base text-gray-600">Deadline</p>
+                      <p class="text-base font-semibold">21 March 2025</p>
+                    </div>
+                    <!-- right -->
+                    <button
+                      class="py-2 px-4 bg-blue-600 text-base font-semibold text-white rounded-lg"
+                      id="cardFiveBtn"
+                    >
+                      Completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- task card 6 -->
+              <div class="p-3 bg-slate-200 rounded-md">
+                <!-- card top -->
+                <div class="space-y-2">
+                  <h3 class="px-3 py-1 bg-slate-100 w-fit rounded-md text-base">
+                    GlassDoor
+                  </h3>
+                  <h1 class="text-xl font-semibold" id="cardSixTitle">
+                    Improve Job searching
+                  </h1>
+                  <p
+                    class="text-base leading-normal p-2 bg-slate-100 rounded-md"
+                  >
+                    Finding the right job can be challenging, but with the right
+                    strategies..
+                  </p>
+                </div>
+                <!-- bottom -->
+                <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
+                  <div class="flex justify-between items-center">
+                    <!-- left -->
+                    <div>
+                      <p class="text-base text-gray-600">Deadline</p>
+                      <p class="text-base font-semibold">21 March 2025</p>
+                    </div>
+                    <!-- right -->
+                    <button
+                      class="py-2 px-4 bg-blue-600 text-base font-semibold text-white rounded-lg"
+                      id="cardSixBtn"
+                    >
+                      Completed
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="col-span-3 p-4 bg-white rounded-md">
+            <!-- top -->
+            <div
+              class="py-3 gap-4 border-b-2 border-dashed border-blue-100 flex flex-col justify-center items-center"
+            >
+              <div class="space-x-3 flex justify-center items-center">
+                <img src="./assets/activity.png" alt="activity logo" />
+                <h2 class="text-xl capitalize font-semibold">activity log</h2>
+              </div>
+              <button
+                class="py-2 px-4 bg-blue-600 text-white rounded-md"
+                id="clearHistoryBtn"
+              >
+                Clear History
+              </button>
+            </div>
+          </div>
+        </section>
+      </header>
     </main>
+    <!-- script file -->
+    <script src="script.js"></script>
   </body>
 </html>
