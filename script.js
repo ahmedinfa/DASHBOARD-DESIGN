@@ -62,7 +62,7 @@ function taskFunctionalities(totalTask, completedTask) {
   document.getElementById(totalTask).innerText = `${convertedTaskLength}`;
   document.getElementById(completedTask).innerText = `${convertedCompleteTask}`;
   if (convertedTaskLength === 0) {
-    alert(`You have completed all tasks`);
+    alert(`Congrats!! You have complete all the current task`);
   }
 }
 
