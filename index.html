@@ -11,7 +11,7 @@
   <body>
     <!-- main -->
     <main class="min-h-screen bg-gray-100" id="main">
-      <header class="max-w-[1530px] mx-auto">
+      <header class="max-w-[1350px] mx-auto">
         <nav
           class="h-20 px-3 bg-white rounded-md flex justify-between items-center"
         >
@@ -32,7 +32,10 @@
               <h3 class="text-3xl font-semibold" id="completeTask">0</h3>
             </div>
             <!-- color changing button -->
-            <div id="themeBtn" class="p-2 rounded-full bg-slate-200">
+            <div
+              id="themeBtn"
+              class="p-2 rounded-full bg-slate-200 cursor-pointer"
+            >
               <img src="./assets/theme-btn.png" alt="theme button" />
             </div>
           </div>
@@ -63,7 +66,7 @@
               <!-- card 2 -->
               <div
                 class="col-span-6 py-2 bg-gradient-to-r from-blue-500 to-blue-400 rounded-md flex justify-center items-center cursor-pointer"
-                id="board"
+                id="blogQuestions"
               >
                 <div class="flex justify-center items-center gap-5">
                   <img src="./assets/board.png" alt="board logo" />
@@ -101,11 +104,13 @@
                   <h1 class="text-xl font-semibold" id="cardOneTitle">
                     Fix Mobile Button Issue
                   </h1>
-                  <p
-                    class="text-base leading-normal p-2 overflow-hidden bg-slate-100 rounded-md"
+                  <div
+                    class="h-20 bg-slate-100 rounded-md p-2 flex justify-center items-center"
                   >
-                    Debug using Chrome DevTools, check for overlapping
-                  </p>
+                    <p class="text-base leading-normal">
+                      Debug using Chrome DevTools, check for overlapping
+                    </p>
+                  </div>
                 </div>
                 <!-- bottom -->
                 <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
@@ -136,12 +141,14 @@
                   <h1 class="text-xl font-semibold" id="cardTwoTitle">
                     Add Dark Mode
                   </h1>
-                  <p
-                    class="text-base leading-normal p-2 bg-slate-100 rounded-md"
+                  <div
+                    class="h-20 bg-slate-100 p-2 rounded-md flex justify-center items-center"
                   >
-                    Store the user's preference in localStorage, update CSS
-                    varia
-                  </p>
+                    <p class="text-base leading-normal">
+                      Store the user's preference in localStorage, update CSS
+                      varia
+                    </p>
+                  </div>
                 </div>
                 <!-- bottom -->
                 <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
@@ -172,11 +179,13 @@
                   <h1 class="text-xl font-semibold" id="cardThreeTitle">
                     Optimize Home page 
                   </h1>
-                  <p
-                    class="text-base leading-normal p-2 bg-slate-100 rounded-md"
+                  <div
+                    class="h-20 bg-slate-100 p-2 rounded-md flex justify-center items-center"
                   >
-                    A slow-loading homepage can increase bounce rates
-                  </p>
+                    <p class="text-base leading-normal">
+                      A slow-loading homepage can increase bounce rates
+                    </p>
+                  </div>
                 </div>
                 <!-- bottom -->
                 <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
@@ -207,11 +216,13 @@
                   <h1 class="text-xl font-semibold" id="cardFourTitle">
                     Add new emoji 🤲
                   </h1>
-                  <p
-                    class="text-base leading-normal p-2 bg-slate-100 rounded-md"
+                  <div
+                    class="h-20 bg-slate-100 p-2 rounded-md flex justify-center items-center"
                   >
-                    Emojis have become an essential part of digital
-                  </p>
+                    <p class="text-base leading-normal">
+                      Emojis have become an essential part of digital
+                    </p>
+                  </div>
                 </div>
                 <!-- bottom -->
                 <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
@@ -242,11 +253,13 @@
                   <h1 class="text-xl font-semibold" id="cardFiveTitle">
                     Integrate OpenAI API
                   </h1>
-                  <p
-                    class="text-base leading-normal p-2 bg-slate-100 rounded-md"
+                  <div
+                    class="h-20 bg-slate-100 p-2 rounded-md flex justify-center items-center"
                   >
-                    Integrating the OpenAI API into your applications
-                  </p>
+                    <p class="text-base leading-normal">
+                      Integrating the OpenAI API into your applications
+                    </p>
+                  </div>
                 </div>
                 <!-- bottom -->
                 <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
@@ -277,11 +290,13 @@
                   <h1 class="text-xl font-semibold" id="cardSixTitle">
                     Improve Job searching
                   </h1>
-                  <p
-                    class="text-base leading-normal p-2 bg-slate-100 rounded-md"
+                  <div
+                    class="h-20 bg-slate-100 p-2 rounded-md flex justify-center items-center"
                   >
-                    Finding the right job can be challenging, but with the..
-                  </p>
+                    <p class="text-base leading-normal">
+                      Finding the right job can be challenging, but..
+                    </p>
+                  </div>
                 </div>
                 <!-- bottom -->
                 <div class="border-t-2 border-dashed border-blue-200 mt-5 pt-3">
@@ -320,6 +335,8 @@
                 Clear History
               </button>
             </div>
+            <!-- bottom -->
+            <div id="historyContainer" class="mt-3 space-y-3"></div>
           </div>
         </section>
       </header>
